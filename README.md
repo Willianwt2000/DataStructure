@@ -8,7 +8,7 @@ Welcome to my dedicated repository for a **one-month intensive study of Data Str
 
 The primary aim of this month-long challenge is to build a robust understanding of core data structures and common algorithms. Through focused learning and hands-on practice, I intend to:
 
-  * **Deepen Understanding of Core Data Structures:** Gain proficiency in arrays, linked lists, stacks, queues, trees, graphs, hash maps, and more.
+  * **Deepen Understanding of Core Datkja Structures:** Gain proficiency in arrays, linked lists, stacks, queues, trees, graphs, hash maps, and more.
   * **Master Algorithmic Paradigms:** Learn and apply various algorithmic approaches, including searching, sorting, recursion, dynamic programming (intro), and greedy algorithms.
   * **Excel in Algorithmic Problem Solving:** Practice extensively on platforms like LeetCode to apply theoretical knowledge to practical coding challenges.
   * **Analyze Time and Space Complexity:** Develop a strong intuition for evaluating algorithm efficiency using Big O notation.
