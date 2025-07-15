@@ -39,9 +39,3 @@ Below is a list of LeetCode problems I'm tackling this week to solidify my under
     * **Approach:** Finding the middle, reversing the second half, and comparing with the first half.
 
 ---
-
-## 💡 Reflections and Learnings
-
-Linked lists introduce a different way of thinking about data organization compared to arrays. The pointer-based nature requires careful attention to memory management and edge cases. The two-pointer technique has become a powerful tool in my problem-solving arsenal.
-
-I'm excited to continue exploring more complex data structures in the coming weeks! 
