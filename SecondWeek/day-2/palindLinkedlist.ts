@@ -1,41 +1,34 @@
-class ListNode {
-      val: number
-      next: ListNode | null
-      size: number = 0;
-      constructor(val?: number, next?: ListNode | null) {
-          this.val = (val===undefined ? 0 : val)
-          this.next = (next===undefined ? null : next)
-          console.log("Before "+this.size)
-          this.size++
-          console.log("After "+this.size)
-
-      }
-  }
- 
-
+//leetcode: https://leetcode.com/problems/palindrome-linked-list/?envType=problem-list-v2&envId=linked-list
 function isPalindrome(head: ListNode | null): boolean {
-    
+    if (!head || !head.next) return true;
 
-  // console.log(head)
+    // 1. Encontrar la mitad usando el método de rápido y lento
+    let slow: ListNode | null = head;
+    let fast: ListNode | null = head;
+    while (fast && fast.next) {
+        slow = slow.next!;
+        fast = fast.next.next;
+    }
 
-  // for (let i = 0; i < .length; i++) {
-  //   const element = array[i];
-    
-  // }
+    // 2. Invertir la segunda mitad
+    let prev: ListNode | null = null;
+    let current: ListNode | null = slow;
+    while (current) {
+        const nextTemp = current.next;
+        current.next = prev;
+        prev = current;
+        current = nextTemp;
+    }
 
-    return false
-};
+    // 3. Comparar la primera mitad con la segunda mitad invertida
+    let left = head;
+    let right = prev;
+    while (right) {
+        if (left.val !== right.val) return false;
+        left = left.next!;
+        right = right.next;
+    }
 
-
-// let node4 = new ListNode(4)
-// let node3 = new ListNode(3,node4)
-let node2 = new ListNode(2)
-let head = new ListNode(1,node2);
-
-
-
-
-console.log("tamanño "+head.size)
-
-console.log('Output:', isPalindrome(head));
+    return true;
+}
 
