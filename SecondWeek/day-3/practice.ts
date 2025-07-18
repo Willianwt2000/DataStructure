@@ -7,7 +7,7 @@ class ListNode {
   }
 }
 
-function createLinkedList(arr: number[]): ListNode | null {
+function deleteNodes(arr: number[]): ListNode | null {
   if (arr.length === 0) return null;
   let head = new ListNode(arr[0]);
   let current = head;
@@ -18,7 +18,7 @@ function createLinkedList(arr: number[]): ListNode | null {
   return head;
 }
 
-function getLinkedListString(head: ListNode | null): string {
+function deteteNodes(head: ListNode | null): string {
   let nodes: number[] = [];
   let current = head;
   while (current) {
@@ -115,17 +115,17 @@ function changeFirstNodeValue(head: ListNode | null, newValue: number): void {
 }
 
 console.log("\n--- Ejercicio 5: changeFirstNodeValue ---");
-const list5 = createLinkedList([1, 2, 3]);
-console.log(`Lista original: ${getLinkedListString(list5)}`);
+const list5 = deleteNodes([1, 2, 3]);
+console.log(`Lista original: ${deteteNodes(list5)}`);
 changeFirstNodeValue(list5, 99);
 console.log(
-  `Lista modificada: ${getLinkedListString(list5)} (Esperado: 99 -> 2 -> 3)`
+  `Lista modificada: ${deteteNodes(list5)} (Esperado: 99 -> 2 -> 3)`
 );
 
 // Prueba con lista vacía
-const emptyList = createLinkedList([]);
-console.log(`\nLista vacía: ${getLinkedListString(emptyList)}`);
+const emptyList = deleteNodes([]);
+console.log(`\nLista vacía: ${deteteNodes(emptyList)}`);
 changeFirstNodeValue(emptyList, 100);
 console.log(
-  `Lista modificada: ${getLinkedListString(emptyList)} (Esperado: Lista vacía)`
+  `Lista modificada: ${deteteNodes(emptyList)} (Esperado: Lista vacía)`
 );
